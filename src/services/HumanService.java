@@ -1,6 +1,6 @@
 package services;
 
-import io.ReadAndWrite;
+import io.ReadAndWriteHuman;
 import models.Human;
 
 import java.util.ArrayList;
@@ -10,12 +10,12 @@ public class HumanService {
     private List<Human> humans = new ArrayList<>();
 
     public HumanService(){
-        humans = ReadAndWrite.readHuman();
+        humans = ReadAndWriteHuman.readHuman();
     }
 
     public void save(Human human) {
         humans.add(human);
-        ReadAndWrite.writeHuman(humans);
+        ReadAndWriteHuman.writeHuman(humans);
     }
 
     public List<Human> findAll() {
@@ -28,7 +28,7 @@ public class HumanService {
 
     public void edit(int index, Human human) {
         humans.set(index, human);
-        ReadAndWrite.writeHuman(humans);
+        ReadAndWriteHuman.writeHuman(humans);
     }
 
     public int findIndexByName(String name){

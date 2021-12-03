@@ -6,7 +6,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReadAndWrite {
+public class ReadAndWriteHuman {
 
     public static List<Human> readHuman() {
         try {

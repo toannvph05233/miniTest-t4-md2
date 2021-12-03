@@ -10,13 +10,24 @@ import java.util.Scanner;
 public class ViewHuman {
     Scanner scanner = new Scanner(System.in);
 
-    public int menu() {
+    public int menuUser() {
         System.out.println("1. Thêm");
         System.out.println("2. Sửa");
         System.out.println("3. Xóa");
         System.out.println("4. Show");
+        System.out.println("5. Đăng xuất");
         return Integer.parseInt(scanner.nextLine());
     }
+
+    public int menuAdmin() {
+        System.out.println("2. Sửa Account");
+        System.out.println("3. Xóa Account");
+        System.out.println("4. Show Account");
+        System.out.println("5. Đăng xuất");
+        return Integer.parseInt(scanner.nextLine());
+    }
+
+
     public int menuAdd() {
         System.out.println("1. Thêm Student");
         System.out.println("2. Thêm Teacher");

@@ -5,12 +5,12 @@ import services.HumanService;
 import views.ViewHuman;
 
 public class ControllerHuman {
-    public static void main(String[] args) {
+    public static void menuManagerUser() {
         ViewHuman viewHuman = new ViewHuman();
         HumanService humanService = new HumanService();
 
         while (true) {
-            int choice = viewHuman.menu();
+            int choice = viewHuman.menuUser();
             switch (choice) {
                 case 1:
                     int choiceAdd = viewHuman.menuAdd();
@@ -34,11 +34,20 @@ public class ControllerHuman {
                         }
                     }
                     break;
-                case 3:
+                case 5:
+                    return;
                 case 4:
                     viewHuman.show(humanService.findAll());
                     break;
             }
+        }
+
+    }
+
+    public static void menuManagerAdmin() {
+        ViewHuman viewHuman = new ViewHuman();
+        while (true) {
+            int choice = viewHuman.menuAdmin();
         }
 
     }
